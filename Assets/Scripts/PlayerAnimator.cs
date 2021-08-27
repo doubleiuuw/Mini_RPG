@@ -29,19 +29,10 @@ public class PlayerAnimator : CharacterAnimator
                 currentAttackAnimSet = weaponAnimationsDict[newItem];
             }
         }
-        else if( newItem == null && oldItem != null && oldItem.equipSlot == EquipmentSlot.Weapon);
-        {
-            animator.SetLayerWeight(1, 0);
-            currentAttackAnimSet = defaultAttackAnimSet;
-        }
 
         if(newItem != null && newItem.equipSlot == EquipmentSlot.Shield)
         {
             animator.SetLayerWeight(2, 1);
-        }
-        else if( newItem == null && oldItem != null && oldItem.equipSlot == EquipmentSlot.Shield);
-        {
-            animator.SetLayerWeight(2, 0);
         }
     }
 
